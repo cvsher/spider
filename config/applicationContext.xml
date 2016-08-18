@@ -33,10 +33,13 @@
 		p:urlCrawledJudgment-ref="defaultUrlCrawledJudgment"
 	/>
 	
+	<!-- 待爬url队列 -->
 	<bean id="urlQueue" class="com.cvsher.spider.queue.RedisProducerConsumerQueue" 
 		p:jedisPool-ref="jedisPool"
 		p:queueName="spider:queue:urlPCQueue"
 	/>
+	
+	<!-- 已爬取网页内容队列 -->
 	<bean id="contentQueue" class="com.cvsher.spider.queue.RedisProducerConsumerQueue" 
 		p:jedisPool-ref="jedisPool"
 		p:queueName="spider:queue:contentPCQueue"
